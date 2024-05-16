@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserRoleModule } from './user_role/user_role.module';
 import { MongooseModule } from '@nestjs/mongoose';
+import { RoleModule } from './role/role.module';
 
 @Module({
   imports: [
@@ -13,7 +14,8 @@ import { MongooseModule } from '@nestjs/mongoose';
         w: 'majority',
       }),
     }),
-    UserRoleModule
+    UserRoleModule,
+    RoleModule
   ],
   controllers: [AppController],
   providers: [AppService],
